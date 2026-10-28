@@ -1,0 +1,35 @@
+import { Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout'
+import ProtectedRoute from './components/ProtectedRoute'
+import Home from './pages/Home'
+import Catalog from './pages/Catalog'
+import ProductDetail from './pages/ProductDetail'
+import { Login, Signup } from './pages/AuthPages'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
+import CheckoutSuccess from './pages/CheckoutSuccess'
+import Account from './pages/Account'
+import Wishlist from './pages/Wishlist'
+import AdminProducts from './pages/admin/AdminProducts'
+import AdminOrders from './pages/admin/AdminOrders'
+
+export default function App() {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Catalog />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+        <Route path="/checkout/success" element={<ProtectedRoute><CheckoutSuccess /></ProtectedRoute>} />
+        <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
+        <Route path="/wishlist" element={<ProtectedRoute><Wishlist /></ProtectedRoute>} />
+        <Route path="/admin" element={<ProtectedRoute adminOnly><AdminProducts /></ProtectedRoute>} />
+        <Route path="/admin/orders" element={<ProtectedRoute adminOnly><AdminOrders /></ProtectedRoute>} />
+      </Route>
+    </Routes>
+  )
+}

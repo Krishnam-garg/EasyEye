@@ -1,0 +1,5 @@
+insert into products (name, description, price, stock_quantity, frame_shape, material, color, frame_details, image_urls) values
+('Meridian', 'A refined round frame in brushed titanium with anti-reflective lenses.', 420, 12, 'Round', 'Titanium', 'Gold', '{"lens":"Anti-reflective, blue-light filter","width_mm":48,"bridge_mm":21,"temple_mm":145}', '{https://placehold.co/900x900/111/b8a47e?text=Meridian}'),
+('Noir Aviator', 'Matte black aviator with polarised lenses and spring hinges.', 380, 3, 'Aviator', 'Metal', 'Black', '{"lens":"Polarised","width_mm":58,"bridge_mm":14,"temple_mm":140}', '{https://placehold.co/900x900/111/fff?text=Noir+Aviator}'),
+('Atelier', 'Hand-polished acetate square frame, deep tortoise finish.', 340, 8, 'Square', 'Acetate', 'Tortoise', '{"lens":"Scratch-resistant","width_mm":52,"bridge_mm":19,"temple_mm":145}', '{https://placehold.co/900x900/111/b8a47e?text=Atelier}'),
+('Argent', 'Ultra-light silver rectangular frame, 14g.', 460, 0, 'Rectangle', 'Titanium', 'Silver', '{"lens":"Anti-reflective","width_mm":54,"bridge_mm":18,"temple_mm":145}', '{https://placehold.co/900x900/111/ccc?text=Argent}');
